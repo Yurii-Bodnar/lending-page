@@ -14,10 +14,49 @@ export const Title = styled.h2`
   padding-top: 260px;
   padding-left: 119px;
   color: ${p => p.theme.colors.main};
-  /* position: relative; */
+  opacity: ${({ useChange }) => (useChange ? '1' : '0')};
   @media screen and (min-width: 1300px) {
     padding-top: 260px;
   }
+  animation-name: ${({ useChange }) => useChange && 'setDelayBenefits'};
+  animation-duration: ${({ useChange }) => useChange && '1000ms'};
+  animation-iteration-count: ${({ useChange }) => useChange && '1'};
+  @keyframes setDelayBenefits {
+    0% {
+      background-color: white;
+      padding-top: 100%;
+      opacity: 0;
+    }
+    10% {
+      background-color: white;
+      padding-top: 90%;
+      opacity: 1;
+    }
+    20% {
+      background-color: white;
+      padding-top: 80%;
+      opacity: 1;
+    }
+    30% {
+      background-color: white;
+      padding-top: 70%;
+      opacity: 1;
+    }
+    40% {
+      background-color: white;
+      padding-top: 60%;
+      opacity: 1;
+    }
+    50% {
+      background-color: white;
+      padding-top: 50%;
+      opacity: 1;
+    }
+    100% {
+      padding-top: 250px;
+      opacity: 1;
+    };
+
 `;
 export const BgImage = styled.img`
   position: absolute;

@@ -20,21 +20,28 @@ const HomePage = () => {
     setScrollTopState(scrollState > e.currentTarget.scrollTop);
     setScrollState(e.currentTarget.scrollTop);
   };
+  console.log(
+    'HOME==>',
+    Math.floor(scrollState) === window.innerHeight,
+    'CONDITION===>',
+    scrollState < 10
+  );
   return (
     <Box scrollState={scrollState} onScroll={handleScroll}>
       <Container>
         <Header scrollState={scrollState} />
         <Hero />
       </Container>
-      <HowCreated scrollState={scrollState} />
+      <HowCreated scrollState={scrollState} scrollTopState={scrollTopState} />
       {scrollState < 10 ? (
-        <BgImg src={sneakers} alt="shoes"></BgImg>
+        <BgImg src={sneakers} alt="shoes" />
       ) : scrollState > window.innerHeight + 10 ? null : scrollTopState ? (
         <ShoesMoveTop src={sneakers} alt="shoes"></ShoesMoveTop>
       ) : (
         <ShoesMove src={sneakers} alt="shoes"></ShoesMove>
       )}
-      <Collection />
+
+      <Collection scrollState={scrollState} />
       <Benefits scrollState={scrollState} />
     </Box>
   );

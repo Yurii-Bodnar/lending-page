@@ -1,6 +1,63 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 110px;
+  height: 100vh;
+  background-color: ${p => p.theme.colors.red};
+  scroll-snap-align: start;
+  padding-top: 20px;
+  opacity: ${({ useChange }) => (useChange ? '1' : '0')};
+
+  animation-name: ${({ useChange }) => useChange && 'setDelay'};
+  animation-duration: ${({ useChange }) => useChange && '1000ms'};
+  animation-iteration-count: ${({ useChange }) => useChange && '1'};
+  @keyframes setDelay {
+    0% {
+      opacity: 0;
+      padding-top: 100%;
+    }
+    10% {
+      background-color: ${p => p.theme.colors.red};
+      padding-top: 90%;
+      opacity: 1;
+    }
+    20% {
+      background-color: ${p => p.theme.colors.red};
+      padding-top: 80%;
+      opacity: 1;
+    }
+    30% {
+      background-color: ${p => p.theme.colors.red};
+      padding-top: 70%;
+      opacity: 1;
+    }
+    40% {
+      background-color: ${p => p.theme.colors.red};
+      padding-top: 60%;
+      opacity: 1;
+    }
+    50% {
+      background-color: ${p => p.theme.colors.red};
+      padding-top: 50%;
+      opacity: 1;
+    }
+    100% {
+      background-color: ${p => p.theme.colors.red};
+      padding-top: 20px;
+      opacity: 1;
+      @media screen and (min-width: 1300px) {
+        padding-top: 0px;
+      }
+    }
+  }
+  @media screen and (min-width: 1300px) {
+    padding-top: 0px;
+  }
+`;
+export const SectionSecond = styled.section`
   background-color: ${p => p.theme.colors.red};
   display: flex;
   align-items: center;
@@ -9,10 +66,11 @@ export const Section = styled.section`
   height: 100vh;
   scroll-snap-align: start;
   padding-top: 20px;
-  @media screen and (min-width: 1300px) {
-    padding-top: 0px;
-  }
+  animation-name: setDelay;
+  animation-duration: 1s;
+  animation-iteration-count: 5;
 `;
+
 export const Container = styled.div`
   width: 389px;
 `;

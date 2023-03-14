@@ -5,6 +5,7 @@ export const Section = styled.section`
   align-items: center;
   flex-direction: column;
   padding: 65px 25px 0;
+  
   @media screen and (min-width: 1300px) {
     padding-top: 190px;
   }

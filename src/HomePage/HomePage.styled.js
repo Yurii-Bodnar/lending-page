@@ -44,8 +44,8 @@ export const ShoesMove = styled.img`
   animation-iteration-count: 1;
   @keyframes identifier {
     from {
-      top: 250px;
       left: 240px;
+      width: 453px;
       transform: rotate(0);
     }
     to {

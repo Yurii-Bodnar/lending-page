@@ -1,5 +1,8 @@
+import { BgColor } from 'component/Collection/Collection.style';
+import { useEffect, useState } from 'react';
 import dog from '../../assets/images/dogElsa.png';
 import shoes from '../../assets/images/shoes.png';
+
 import {
   Container,
   MessageText,
@@ -14,10 +17,19 @@ import {
   WrapperSecond,
 } from './HowCreated.styled';
 
-const HowCreated = ({ scrollState }) => {
+const HowCreated = ({ scrollState, scrollTopState }) => {
+  const [useChange, setUseChange] = useState(false);
+
+  useEffect(() => {
+    if (Math.floor(scrollState) === window.innerHeight) {
+      setUseChange(true);
+    } else {
+      setUseChange(false);
+    }
+  }, [scrollState, scrollTopState]);
   return (
-    <div>
-      <Section scrollState={scrollState}>
+    <BgColor>
+      <Section useChange={useChange}>
         <Container>
           <Title>HOW SCHEWS WAS CREATED</Title>
         </Container>
@@ -50,7 +62,7 @@ const HowCreated = ({ scrollState }) => {
           </div>
         </div>
       </Section>
-    </div>
+    </BgColor>
   );
 };
 

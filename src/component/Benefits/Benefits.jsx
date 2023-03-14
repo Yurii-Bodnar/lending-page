@@ -17,11 +17,21 @@ import {
   Title,
 } from './Benefits.styled';
 import shoesBenefits from '../../assets/images/shoesBenefits.png';
+import { useEffect, useState } from 'react';
 
 const Benefits = ({ scrollState }) => {
+  const [useChange, setUseChange] = useState(false);
+
+  useEffect(() => {
+    if (Math.floor(scrollState) === window.innerHeight * 3 + 1) {
+      setUseChange(true);
+    } else {
+      setUseChange(false);
+    }
+  }, [scrollState]);
   return (
     <Section>
-      <Title>BENEFITS</Title>
+      <Title useChange={useChange}>BENEFITS</Title>
       {scrollState >= window.innerHeight * 3 - 10 ? (
         <BgImage src={shoesBenefits} alt="shoes" />
       ) : null}

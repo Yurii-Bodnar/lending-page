@@ -70,7 +70,8 @@ const Header = ({ scrollState }) => {
                   <use href={iconBack + '#icon-bag'}></use>
                 </Svg>
               )) ||
-              (scrollState < window.innerHeight * 3 + 30 && (
+              ((scrollState < window.innerHeight * 3 + 30 ||
+                scrollState - 20 < window.innerHeight * 3 + 30) && (
                 <Svg scrollState={scrollState}>
                   <use href={iconBack + '#icon-icon-bag'}></use>
                 </Svg>

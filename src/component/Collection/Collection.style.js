@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-
+export const BgColor = styled.div`
+  background: ${p => p.theme.colors.red};
+`;
 export const Section = styled.section`
   background: ${p => p.theme.colors.red};
   display: flex;
@@ -8,6 +10,11 @@ export const Section = styled.section`
   align-items: center;
   scroll-snap-align: start;
   padding-top: 20px;
+  opacity: ${({ useChange }) => (useChange ? '1' : '0')};
+
+  animation-name: ${({ useChange }) => useChange && 'setDelay'};
+  animation-duration: ${({ useChange }) => useChange && '1000ms'};
+  animation-iteration-count: ${({ useChange }) => useChange && '1'};
   @media screen and (min-width: 1300px) {
     padding-top: 0px;
   }
@@ -21,7 +28,6 @@ export const Wrapper = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: center;
-
 `;
 export const WrapperTitle = styled.div`
   background-color: ${p => p.theme.colors.white};
