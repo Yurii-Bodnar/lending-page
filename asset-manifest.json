@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/lending-page/static/css/main.7acaea2f.css",
-    "main.js": "/lending-page/static/js/main.bb7e6571.js",
-    "static/js/753.2ddd501f.chunk.js": "/lending-page/static/js/753.2ddd501f.chunk.js",
+    "main.js": "/lending-page/static/js/main.62f235b5.js",
+    "static/js/745.22e58fcf.chunk.js": "/lending-page/static/js/745.22e58fcf.chunk.js",
+    "static/js/425.940ca4f1.chunk.js": "/lending-page/static/js/425.940ca4f1.chunk.js",
     "static/media/shoesBenefits.png": "/lending-page/static/media/shoesBenefits.538a3b64b42d7c8172c9.png",
     "static/media/sneakers.png": "/lending-page/static/media/sneakers.6ee589c9f664e1c1c3a8.png",
     "static/media/shoesSliderFirst.png": "/lending-page/static/media/shoesSliderFirst.ff6cb601a621fdd36402.png",
@@ -14,11 +15,12 @@
     "static/media/shoesSlider.png": "/lending-page/static/media/shoesSlider.e23d3b9eccc745f6cd95.png",
     "index.html": "/lending-page/index.html",
     "main.7acaea2f.css.map": "/lending-page/static/css/main.7acaea2f.css.map",
-    "main.bb7e6571.js.map": "/lending-page/static/js/main.bb7e6571.js.map",
-    "753.2ddd501f.chunk.js.map": "/lending-page/static/js/753.2ddd501f.chunk.js.map"
+    "main.62f235b5.js.map": "/lending-page/static/js/main.62f235b5.js.map",
+    "745.22e58fcf.chunk.js.map": "/lending-page/static/js/745.22e58fcf.chunk.js.map",
+    "425.940ca4f1.chunk.js.map": "/lending-page/static/js/425.940ca4f1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.bb7e6571.js"
+    "static/js/main.62f235b5.js"
   ]
 }
